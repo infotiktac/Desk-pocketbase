@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: pocketbase
+    env: docker
+    buildCommand: docker build -t pocketbase .
+    startCommand: docker run -p 8080:8080 pocketbase
+    envVars:
+      - key: PORT
+        value: 8080
